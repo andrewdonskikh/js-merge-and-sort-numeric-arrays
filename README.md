@@ -1,8 +1,3 @@
-TODO: //
-* Readme
-* Tag
-* Travis green build
-
 [![Build Status](https://travis-ci.org/andrewdonskikh/js-merge-and-sort-numeric-arrays.svg?branch=master)](https://travis-ci.org/andrewdonskikh/js-merge-and-sort-numeric-arrays)
 
 ## Synopsis
@@ -16,10 +11,21 @@ ES2015 syntax. Please make sure you have the latest, 6th [Node](https://nodejs.o
 
 ```
 const mergeAndSortNumericArrays = require('./mergeAndSortNumericArrays');
-const arrayA = [1, 2, 5];
+const arrayA = [1, 5, 2];
 const arrayB = [2, 3];
 
 const result = mergeAndSortNumericArrays(arrayA, arrayB);
+```
+
+You can also run an example with:
+```
+npm start
+```
+And get the next result (the time may vary):
+```
+Fast result: 1,2,2,3,5
+quick sort took: 8 milliseconds.
+default sort took: 42 milliseconds.
 ```
 
 ## Tests
