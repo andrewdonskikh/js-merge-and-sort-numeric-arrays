@@ -1,25 +1,34 @@
 {
-    "name": "js-merge-and-sort-numeric-arrays",
-    "version": "1.0.0",
-    "description": "Fast sort module. Implementation of quick sort for Javascript.",
-    "main": "app.js",
-    "scripts": {
-        "start": "node ./app.js",
-        "test": "./node_modules/.bin/jasmine-node ."
-    },
-    "keywords": [
-        "javascript",
-        "quicksort",
-        "sort",
-        "algorythm",
-        "array"
-    ],
-    "author": "Andrey_Donskikh <avdons@gmail.com> (http://www.donskikh.com)",
-    "license": "MIT",
-    "dependencies": {
-        "jasmine-node": "1.14.5"
-    },
-    "engines": {
-        "node": ">=4.2.4"
-    }
+  "name": "@andrewdonskikh/js-merge-and-sort-numeric-arrays",
+  "version": "1.0.0",
+  "description": "Fast sort module. Implementation of quick sort for Javascript.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "jasmine-node ."
+  },
+  "keywords": [
+    "javascript",
+    "quicksort",
+    "sort",
+    "algorythm",
+    "array"
+  ],
+  "author": "Andrey_Donskikh <avdons@gmail.com> (http://www.donskikh.com)",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine-node": "1.14.5"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewdonskikh/js-merge-and-sort-numeric-arrays.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewdonskikh/js-merge-and-sort-numeric-arrays/issues"
+  },
+  "homepage": "https://github.com/andrewdonskikh/js-merge-and-sort-numeric-arrays#readme"
 }

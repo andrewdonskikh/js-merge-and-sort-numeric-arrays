@@ -1,1 +1,10 @@
-//TODO
+language: node_js
+
+node_js:
+  - current
+
+install:
+  - npm i
+
+script:
+  - npm test

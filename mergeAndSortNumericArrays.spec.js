@@ -7,17 +7,12 @@ describe('mergeAndSortNumericArrays()', () => {
     const arrayB = [2, 3];
     const mixedArray = ['a', 2, 'b', 3, 'c'];
     const expectedResult = [1, 2, 2, 3, 4, 5];
-
+    
     it('sould return one array', () => {
       expect(mergeAndSortNumericArrays(arrayA, arrayB) instanceof Array).toBeTruthy();
     });
 
     it('should sort 5 items is the increasing order', () => {
-      expect(mergeAndSortNumericArrays(arrayA, arrayB)).toEqual(expectedResult);
-    });
-
-    it('should sort 50 000 items faster than defaul Array.sort() implementation', () => {
-      //TODO: set timeout
       expect(mergeAndSortNumericArrays(arrayA, arrayB)).toEqual(expectedResult);
     });
 
