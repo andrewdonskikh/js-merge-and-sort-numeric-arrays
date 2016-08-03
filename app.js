@@ -1,1 +1,1 @@
-const QuickSort = require('./quickSort');
+const mergeAndSortNumericArrays = require('./mergeAndSortNumericArrays');

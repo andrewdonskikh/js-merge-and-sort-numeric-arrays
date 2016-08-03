@@ -1,20 +1,23 @@
 {
-  "name": "js-fast-sort",
-  "version": "1.0.0",
-  "description": "Fast sort module. Implementation of quick sort for Javascript.",
-  "main": "app.js",
-  "scripts": {
-    "test": "./node_modules/.bin/jasmine-node ."
-  },
-  "keywords": [
-    "javascript",
-    "quicksort",
-    "sort",
-    "algorythm"
-  ],
-  "author": "Andrey_Donskikh <avdons@gmail.com> (http://www.donskikh.com)",
-  "license": "MIT",
-  "dependencies": {
-    "jasmine-node": "1.14.5"
-  }
+    "name": "js-fast-sort",
+    "version": "1.0.0",
+    "description": "Fast sort module. Implementation of quick sort for Javascript.",
+    "main": "app.js",
+    "scripts": {
+        "test": "./node_modules/.bin/jasmine-node ."
+    },
+    "keywords": [
+        "javascript",
+        "quicksort",
+        "sort",
+        "algorythm"
+    ],
+    "author": "Andrey_Donskikh <avdons@gmail.com> (http://www.donskikh.com)",
+    "license": "MIT",
+    "dependencies": {
+        "jasmine-node": "1.14.5"
+    },
+    "engines": {
+        "node": ">=4.2.4"
+    }
 }
