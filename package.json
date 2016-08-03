@@ -1,16 +1,18 @@
 {
-    "name": "js-fast-sort",
+    "name": "js-merge-and-sort-numeric-arrays",
     "version": "1.0.0",
     "description": "Fast sort module. Implementation of quick sort for Javascript.",
     "main": "app.js",
     "scripts": {
+        "start": "node ./app.js",
         "test": "./node_modules/.bin/jasmine-node ."
     },
     "keywords": [
         "javascript",
         "quicksort",
         "sort",
-        "algorythm"
+        "algorythm",
+        "array"
     ],
     "author": "Andrey_Donskikh <avdons@gmail.com> (http://www.donskikh.com)",
     "license": "MIT",

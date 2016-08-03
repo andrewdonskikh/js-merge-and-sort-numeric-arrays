@@ -1,38 +1,36 @@
-const mergeAndSortNumericArrays = require('./merge-and-sort');
+const mergeAndSortNumericArrays = require('./mergeAndSortNumericArrays');
 
 describe('mergeAndSortNumericArrays()', () => {
 
   describe('mergeAndSortNumericArrays() method', () => {
     const arrayA = [1, 2, 5];
     const arrayB = [2, 3];
-    const expectedResult = [1, 2, 3, 4, 5];
+    const mixedArray = ['a', 2, 'b', 3, 'c'];
+    const expectedResult = [1, 2, 2, 3, 4, 5];
 
     it('sould return one array', () => {
-      expect(QuickSort.sort(false, arrayA, arrayB) instanceof Array).toBeTruthy();
+      expect(mergeAndSortNumericArrays(arrayA, arrayB) instanceof Array).toBeTruthy();
     });
 
     it('should sort 5 items is the increasing order', () => {
-      expect(QuickSort.sort(true, arrayA, arrayB)).toEqual(expectedResult);
+      expect(mergeAndSortNumericArrays(arrayA, arrayB)).toEqual(expectedResult);
     });
 
-    it('should sort 5 000 items faster than defaul Array.sort() implementation', () => {
-      const arrayA = [1, 2, 5];
-      const arrayB = [2, 3];
-      const expectedResult = [1, 2, 3, 4, 5];
-
-      expect(QuickSort.sort(arrayA, arrayB)).toEqual(expectedResult);
+    it('should sort 50 000 items faster than defaul Array.sort() implementation', () => {
+      //TODO: set timeout
+      expect(mergeAndSortNumericArrays(arrayA, arrayB)).toEqual(expectedResult);
     });
 
-    it('should throw an error if no params passed', () => {
-      //TODO
+    it('should return correct result if one of array is empty', () => {
+      expect(mergeAndSortNumericArrays(arrayA, [])).toEqual(arrayA);
     });
 
-    it('should throw an error if no arrays passed', () => {
-      //TODO
+    it('should return an empty array if empty arrays were passed', () => {
+      expect(mergeAndSortNumericArrays([], [])).toEqual([]);
     });
 
-    it('should throw an error if not a numeric arrays passed', () => {
-      //TODO
+    it('should cut off not numeric values are return correct result', () => {
+      expect(mergeAndSortNumericArrays(arrayA, mixedArray)).toEqual(expectedResult);
     });
   });
 });
