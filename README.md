@@ -1,7 +1,7 @@
 TODO: //
 * Readme
-* travis
-* library itself
+* Tag
+* Travis green build
 
 ## Synopsis
 
