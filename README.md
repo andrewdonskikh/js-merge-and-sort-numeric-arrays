@@ -3,6 +3,8 @@ TODO: //
 * Tag
 * Travis green build
 
+[![Build Status](https://travis-ci.org/andrewdonskikh/js-merge-and-sort-numeric-arrays.svg?branch=master)](https://travis-ci.org/andrewdonskikh/js-merge-and-sort-numeric-arrays)
+
 ## Synopsis
 
 This project is an implementation of quick sort algorithm for numeric arrays,
