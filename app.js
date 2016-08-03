@@ -34,6 +34,9 @@ function defaultSort(arrayA, arrayB) {
 
 /**
 * Test function's efficiency and log the time
+* @private
+* @param {function} func Function to execute
+* @param {string} name Name of the function
 */
 function testWithTimer(func, name) {
   let beginTime, endTime, sumTimes = 0;
@@ -52,5 +55,6 @@ const fastResult = mergeAndSortNumericArrays(arrayA, arrayB);
 console.log(`Fast result: ${fastResult}`);
 
 // Test with long arrays and compare with defulat implementaion
+console.log(`With ${longArrayA.length + longArrayB.length} elements:`);
 testWithTimer(mergeAndSortNumericArrays, 'quick sort');
 testWithTimer(defaultSort, 'default sort');

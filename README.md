@@ -24,8 +24,9 @@ npm start
 And get the next result (the time may vary):
 ```
 Fast result: 1,2,2,3,5
-quick sort took: 8 milliseconds.
-default sort took: 42 milliseconds.
+With 50000 elements:
+quick sort took: 7 milliseconds.
+default sort took: 40 milliseconds.
 ```
 
 ## Tests
