@@ -1,7 +1,8 @@
 {
   "name": "@andrewdonskikh/js-merge-and-sort-numeric-arrays",
   "version": "1.0.1",
-  "description": "Fast sort module. Implementation of quick sort for Javascript.",
+  "description": "Fast sort module. Implementation of quick sort for Javascript
+  numeric arrays.",
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
@@ -20,7 +21,7 @@
     "jasmine-node": "1.14.5"
   },
   "engines": {
-    "node": ">=4.2.4"
+    "node": ">=6.3.1"
   },
   "devDependencies": {},
   "repository": {
