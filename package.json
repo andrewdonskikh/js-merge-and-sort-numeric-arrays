@@ -1,6 +1,6 @@
 {
   "name": "@andrewdonskikh/js-merge-and-sort-numeric-arrays",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast sort module. Implementation of quick sort for Javascript.",
   "main": "app.js",
   "scripts": {
