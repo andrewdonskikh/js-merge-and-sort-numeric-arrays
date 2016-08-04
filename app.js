@@ -1,6 +1,7 @@
 const mergeAndSortNumericArrays = require('./mergeAndSortNumericArrays');
 const arrayA = [1, 5, 2];
 const arrayB = [2, 3];
+const mixedArray = [2, 'a', 3, null];
 
 // Set up initial values
 let longArrayA = [];
@@ -53,6 +54,10 @@ function testWithTimer(func, name) {
 // Test simple case
 const fastResult = mergeAndSortNumericArrays(arrayA, arrayB);
 console.log(`Fast result: ${fastResult}`);
+
+// With @checkForTypes = true
+const typeCheckResult = mergeAndSortNumericArrays(arrayA, mixedArray, true);
+console.log(`Result with type check enabled: ${typeCheckResult}`);
 
 // Test with long arrays and compare with defulat implementaion
 console.log(`With ${longArrayA.length + longArrayB.length} elements:`);

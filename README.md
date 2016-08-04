@@ -17,6 +17,18 @@ const arrayB = [2, 3];
 const result = mergeAndSortNumericArrays(arrayA, arrayB);
 ```
 
+If you need to check for types and remove not-numeric values set the last optional
+parameter to true:
+
+```
+const mergeAndSortNumericArrays = require('./mergeAndSortNumericArrays');
+const arrayA = [1, 5, 2];
+const arrayB = [2, 'a', 3, null];
+
+const result = mergeAndSortNumericArrays(arrayA, arrayB, true);
+
+```
+
 You can also run an example with:
 ```
 npm start
@@ -24,9 +36,10 @@ npm start
 And get the next result (the time may vary):
 ```
 Fast result: 1,2,2,3,5
+Result with type check enabled: 1,2,2,3,5
 With 50000 elements:
 quick sort took: 7 milliseconds.
-default sort took: 40 milliseconds.
+default sort took: 37 milliseconds.
 ```
 
 ## Tests

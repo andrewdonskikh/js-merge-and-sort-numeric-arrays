@@ -4,22 +4,85 @@
 * large arrays - O(n log n).
 * No any dependencies. Fast and effective.
 * @param ...arrays Some number of numeric arrays
+* @param {boolean} [checkForTypes] optional
+* It will make algorithm much slowly but bring
+* additional securty value if needed
+* set it a last parameter if needed
 * @return {Array}
 */
 const mergeAndSortNumericArrays = (...arrays) => {
-  const mergedArray = mergeArrays(...arrays);
+
+  const lastParam = arrays[arrays.length - 1];
+  const checkForTypes = typeof lastParam === 'boolean' && lastParam === true
+    ? true
+    : false;
+
+  const cleanedArrays = checkAndCleanUpArrays(checkForTypes, ...arrays);
+  const mergedArray = mergeArrays(cleanedArrays);
   const sortedArray = sort(mergedArray);
 
   return sortedArray;
 }
 
 /**
+* Check wether arrays were passed, clean fom non-numeric values
+* @private
+* @param {boolean} checkForTypes
+* @param ...arrays Some number of arrays
+* @throws Will throw an error if they were not passed
+* or not array were passed
+*/
+function checkAndCleanUpArrays(checkForTypes, ...arrays) {
+  if(arrays.length === 0) {
+    throw new Error('Please specify at least two numeric arrays');
+  }
+
+  // Remove last optional parameter if exists
+  if( typeof arrays[arrays.length - 1] === 'boolean') {
+    arrays.pop();
+  }
+
+  let cleanedArrays = [];
+
+  arrays.forEach((array) => {
+    if(!(array instanceof Array)) {
+      throw new Error('Please specify at least two numeric arrays');
+
+    } else if(checkForTypes) {
+      cleanedArrays.push(removeNonNumvericValuesFrom(array));
+    }
+  });
+
+  return checkForTypes ? cleanedArrays : arrays;
+}
+
+/**
+* Remove non-numeric values from the array
+* @private
+* @param {Array} array Aray to check
+*/
+function removeNonNumvericValuesFrom(array) {
+  return array.filter((item) => {
+    return isNumber(item);
+  });
+}
+
+/**
+ * Check whether the passed value is a number
+ * @private
+ * @param {number} value Value to check
+ */
+function isNumber(value) {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
+/**
 * Merge arrays
 * @private
-* @param ...arrays Some number of numeric arrays
+* @param {Array.<Array>} arrays Array of arrays
 * @return {Array}
 */
-function mergeArrays(...arrays) {
+function mergeArrays(arrays) {
   const mergedArray = arrays.reduce((prev, next) => {
     return prev.concat(next);
   }, []);
